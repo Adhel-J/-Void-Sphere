@@ -582,46 +582,39 @@ void imageGen() {
     cout << "PPM file created: output.ppm" << endl;
 }
 
-// void addValues() {
-//     const auto red = object("Sphere", Vector3D(0,-1,3), 1.0, Vector3D(255,0,0), 500, 0.2);
-//     const auto blue = object("Sphere",Vector3D(-2,0,4), 1.0, Vector3D(0,0,255), 10, 0.3);
-//     const auto green = object("Sphere",Vector3D(2,0,4), 1.0, Vector3D(0,255,0), 500, 0.4);
-//     const auto triangle = object("Triangle",Vector3D(2,0,4), Vector3D(-2,0,4), Vector3D(0,-1,3), Vector3D(255,255,0), 500, 0.5);
-//
-//     const auto space = object("Void", Vector3D(2,0,4), 3);
-//
-//     objects.push_back(red);
-//     objects.push_back(blue);
-//     objects.push_back(green);
-//     objects.push_back(triangle);
-//
-//     // const auto mainSphere = object("Sphere", Vector3D(0, 0, 5), 2.0, Vector3D(255, 0, 0), 500, 0.5);
-//     // const auto voidSphere = object("Void", Vector3D(0, 0, 5), 3.0);
-//     // objects.push_back(mainSphere);
-//     // objects.push_back(voidSphere);
-//
-//     objects.push_back(space);
-//
-//     const auto ambient = Light(0.2, "ambient",Vector3D(0,0,0));
-//     const auto point = Light(0.3, "point", Vector3D(2,1,0));
-//     const auto directional = Light(0.2, "directional", Vector3D(1,4,4));
-//
-//     const auto point2 = Light(0.3, "point", Vector3D(-2,1,0));
-//
-//     lights.push_back(ambient);
-//     lights.push_back(point);
-//     lights.push_back(point2);
-//     lights.push_back(directional);
-//
-// }
+void addValues() {
+    const auto red = object("Sphere", Vector3D(0,-1,3), 1.0, Vector3D(255,0,0), 500, 0.2);
+    const auto blue = object("Sphere",Vector3D(-2,0,4), 1.0, Vector3D(0,0,255), 10, 0.3);
+    const auto green = object("Sphere",Vector3D(2,0,4), 1.0, Vector3D(0,255,0), 500, 0.4);
+    const auto triangle = object("Triangle",Vector3D(2,0,4), Vector3D(-2,0,4), Vector3D(0,-1,3), Vector3D(255,255,0), 500, 0.5);
+
+    const auto space = object("Void", Vector3D(2,0,3), 1.5);
+
+    objects.push_back(red);
+    objects.push_back(blue);
+    objects.push_back(green);
+    objects.push_back(triangle);
+
+    objects.push_back(space);
+
+    const auto ambient = Light(0.2, "ambient",Vector3D(0,0,0));
+    const auto point = Light(0.3, "point", Vector3D(2,1,0));
+    const auto directional = Light(0.2, "directional", Vector3D(1,4,4));
+
+    const auto point2 = Light(0.3, "point", Vector3D(-2,1,0));
+
+    lights.push_back(ambient);
+    lights.push_back(point);
+    lights.push_back(point2);
+    lights.push_back(directional);
+
+}
 
 // void addValues() { // Red sphere with void sphere
-//     const auto redSphere = object("Sphere", Vector3D(0, 0.5, 5), 2.0, Vector3D(255, 0, 0), 500, 0.5);
-//     // const auto greenSphere = object("Sphere", Vector3D(1, 1, 6), 2.0, Vector3D(0, 255, 0), 500, 0.5);
+//     const auto redSphere = object("Sphere", Vector3D(0, 0.5, 5), 2.0, Vector3D(255, 0, 0), 500, 0);
 //     const auto voidSphere = object("Void", Vector3D(1, 0, 3.75), 1.5);
 //
 //     objects.push_back(redSphere);
-//     // objects.push_back(greenSphere);
 //     objects.push_back(voidSphere);
 //
 //     const auto ambient = Light(0.3, "ambient", Vector3D(0, 0, 0));
@@ -634,9 +627,8 @@ void imageGen() {
 // }
 
 // void addValues() { // Green and Red Sphere with void sphere in the middle
-//     const auto redSphere = object("Sphere", Vector3D(0, 0.5, 5), 2.0, Vector3D(255, 0, 0), 500, 0.5);
-//     const auto greenSphere = object("Sphere", Vector3D(0, -0.5, 5), 2.0, Vector3D(0, 255, 0), 500, 0.5);
-//     // const auto greenSphere = object("Sphere", Vector3D(1, 1, 6), 2.0, Vector3D(0, 255, 0), 500, 0.5);
+//     const auto redSphere = object("Sphere", Vector3D(0, 0.5, 5), 2.0, Vector3D(255, 0, 0), 500, 0);
+//     const auto greenSphere = object("Sphere", Vector3D(0, -0.5, 5), 2.0, Vector3D(0, 255, 0), 500, 0);
 //     const auto voidSphere = object("Void", Vector3D(1, 0, 3.75), 1.5);
 //
 //     objects.push_back(redSphere);
@@ -652,21 +644,21 @@ void imageGen() {
 //     lights.push_back(pointLight2);
 // }
 
-void addValues() { // Triangle with void sphere on the middle
-    const auto triangle = object("Triangle",Vector3D(2,0,4), Vector3D(-2,0,4), Vector3D(0,-1,3), Vector3D(255,255,0), 500, 0.5);
-    const auto voidSphere = object("Void", Vector3D(0, 0, 3.2), 0.7);
-
-    objects.push_back(triangle);
-    objects.push_back(voidSphere);
-
-    const auto ambient = Light(0.5, "ambient",Vector3D(0,0,0));
-    const auto point = Light(0.3, "point", Vector3D(2,1,0));
-    const auto directional = Light(0.2, "directional", Vector3D(1,4,4));
-
-    lights.push_back(ambient);
-    lights.push_back(point);
-    lights.push_back(directional);
-}
+// void addValues() { // Triangle with void sphere on the middle
+//     const auto triangle = object("Triangle",Vector3D(2,0,4), Vector3D(-2,0,4), Vector3D(0,-1,3), Vector3D(255,255,0), 500, 0.5);
+//     const auto voidSphere = object("Void", Vector3D(0, 0, 3.2), 0.7);
+//
+//     objects.push_back(triangle);
+//     objects.push_back(voidSphere);
+//
+//     const auto ambient = Light(0.5, "ambient",Vector3D(0,0,0));
+//     const auto point = Light(0.3, "point", Vector3D(2,1,0));
+//     const auto directional = Light(0.2, "directional", Vector3D(1,4,4));
+//
+//     lights.push_back(ambient);
+//     lights.push_back(point);
+//     lights.push_back(directional);
+// }
 
 
 //
